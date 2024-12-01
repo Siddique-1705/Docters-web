@@ -1,0 +1,428 @@
+<html>
+<head><title>Dental</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UV-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="online shopping">
+<meta name="author"content="elena">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<style>
+       body {
+        max-width: 1489px;
+        margin: auto;
+    }
+
+    /* Media query for screens with max-width 600px */
+    @media screen and (max-width: 600px) {
+
+        /* Ensuring the container is properly centered and responsive */
+        .col-xs-12 {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        /* Make images in the carousel fully responsive */
+        #mycarousel .carousel-inner .item img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Make buttons responsive */
+        .btn.form-control {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Adjust text sizes for better readability on smaller screens */
+        .about, .tname, .tname1 {
+            font-size: 16px;
+        }
+
+        /* Ensuring the "Our Team" section is properly aligned */
+        .col-xs-3 {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Make the footer content stack vertically */
+        #footer .col-xs-2 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #footer .col-xs-3 {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Adjust form inputs for smaller screens */
+        .form-control {
+            width: 100%;
+        }
+
+        /* Align the form and footer content more appropriately */
+        .col-xs-offset-2 {
+            margin-left: 0;
+        }
+
+        /* Adjust the services grid for smaller screens */
+        .col-xs-4 {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 15px;
+        }
+
+        .serviceimg {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Adjust the appointment form section */
+        .gf {
+            padding: 0 10px;
+        }
+
+        /* Make the appointment form fit the screen */
+        #form {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+        }
+
+        /* Adjust input fields for smaller screens */
+        #form input[type="text"],
+        #form input[type="email"],
+        #form input[type="date"],
+        #form input[type="time"],
+        #form select,
+        #form textarea {
+            width: 100%;
+            margin-bottom: 15px; /* Add spacing between inputs */
+        }
+
+        /* Reduce form title font size */
+        #form h2 {
+            font-size: 22px;
+        }
+
+        #form h4 {
+            font-size: 18px;
+        }
+
+        /* Adjust "Book Appointment" button */
+        #book {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Adjust the "Submit" button in the form */
+        #submit {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+        .col-xs-5{
+            display: none;
+        }
+
+
+        .col-xs-12 {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        /* "About Us" content layout */
+        .col-xs-6 {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 20px; /* Add space between the image and text */
+        }
+
+        /* Image should be responsive */
+        .col-xs-6 img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Adjust "About Us" section title font size */
+        .about {
+            font-size: 24px; /* Adjust for smaller screens */
+            margin-bottom: 10px;
+        }
+
+        /* Adjust the text paragraph for the About Us section */
+        .aboutp {
+            font-size: 16px; /* Make the text readable on small screens */
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* Adjust the "patient care overview" font size */
+        .patient-overview {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Adjust the patient stats layout */
+        .col-xs-6 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Ensure that the patient stats titles are aligned correctly */
+        .about h1 {
+            font-size: 22px; /* Adjust size */
+            margin-bottom: 5px;
+        }
+
+        /* Ensuring the stats numbers are centered and aligned */
+        .col-xs-6 h1 {
+            font-size: 25px; /* Adjust number size */
+            text-align: center;
+            margin: 0;
+        }
+
+        /* "Service" section buttons grid */
+        .col-xs-4 {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Service images should be responsive */
+        .serviceimg {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* "Book Appointment" form adjustments */
+        .form-control {
+            width: 100%;
+            margin-bottom: 15px; /* Add space between input fields */
+        }
+
+        /* Adjusting the "submit" button */
+        #submit {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+        .aboutp{
+            padding: 2rem;
+        }
+        .about{
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .tname, .tname1 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-xs-3 {
+        text-align: center;
+    }
+
+    .col-xs-3 img {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+    .navbar-brand img {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        right: 2.5rem;
+    }
+    .navbar-right{
+        padding: 1rem;
+        width: 460px;
+
+    }
+    .navbar-collapse{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    }
+
+    .tname, .tname1 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-xs-3 {
+        text-align: center;
+    }
+
+    .col-xs-3 img {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+	.col-xs-3{
+		border: 2px solid white;
+		outline: 2px solid white;
+	}
+    </style>
+    <div class="row">
+        <nav class="navbar navbar-default" style="background: white;">
+            <div class="well" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <img  src="headlogo.png" height="60px" style="margin-left:50px;">
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="nav" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="second.html" >About us</a></li>
+                        <li><a href="another.html">Service</a></li>
+                        <li><a href="ourteam.html">OurTeam</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+<div class="col-xs-12"	>
+
+<div id="mycarousel" class="carousel slide" data-ride="carousel" >
+ 		<ol	class="carousel-indicators">
+			<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#mycarousel" data-slide-to="1" class="active"></li>
+			
+		</ol>
+			<div class="carousel-inner">
+				<div class="item active"><img src="1.jpg " alt="img not found" style="height:500px; width:100%;"
+				></div>
+				<div class="item"><img src="2.jpg" alt="img not found" style="height:500px; width:100%;">	</div>
+			 
+				
+			</div> 
+	</div>
+
+</div>
+
+<div class="col-xs-12">
+	<h1 class="about" align="center">Our Team</h1>
+	<br>
+	<br>
+	<div class="col-xs-3"><img src="t1.png">
+	<p class="tname">Dr. P. Elan Thamilan</p>
+	<p class="tname1">BDS, D. Ortho, BIC (Imp), M.sc (Psch)</p>
+	</div>
+	<div class="col-xs-3"><img src="t2.png">
+	<p align="center" class="tname" >Dr. Gowtham </p>
+	<p class="tname1" >endodontics</p>
+	</div>
+	<div class="col-xs-3"><img src="t3.png">
+	<p align="center" class="tname">Dr. Ramprakash</p>
+	<p class="tname1" >Orthodontic</p>
+	</div>
+	<div class="col-xs-3"><img src="t4.png">
+	<p align="center" class="tname">Dr. Wasim Akram </p>
+	<p class="tname1">Oral pathologist</p>
+	</div>
+	</div>
+
+	<div class="col-xs-12 " id="footer">
+        <br>
+        <img src="footerlogo.png" style="margin-left: 20px;">
+        <br>
+        <div class="col-xs-2">
+        <br>
+        <h2 style="color:#10439f"><b>Service</b></h2>
+        <a href="#" id="fs">Dental Implant        </a><br>
+        <a href="#" id="fs">Smile Designing       </a><br>
+        <a href="#" id="fs">Crowns & Bridges      </a><br>
+        <a href="#" id="fs">Alisners              </a><br>
+        <a href="#" id="fs">Root Canal Treatment  </a><br>
+        <a href="#" id="fs">Scaling & Bleaching   </a><br>
+        <a href="#" id="fs">Maxilo Facial Surgery </a><br>
+        <a href="#" id="fs">Laser treatment       </a><br>
+        </div>
+        <div class="col-xs-2">
+        <br>
+        <h2 style="color:#10439f"><b>Quick Links</b></h2>
+        <a href="#" id="fs">home </a><br>
+        <a href="#" id="fs">about us</a><br>
+        <a href="#" id="fs">Services</a><br>
+        <a href="#" id="fs">our team</a><br>
+        <a href="#" id="fs">contact us</a><br>
+        </div>
+        <div class="col-xs-2">
+        <br>
+        <h2 style="color:#10439f"><b>contact</b></h2>
+        <a href="#" id="fs"><u style="text-decoration: none;">phone</u><br>+91 9677389222</a><br>
+        <a href="#" id="fs"><u style="text-decoration: none;">mail</u><br>salemdentalcenter@gmail.com</a><br>
+        <div class="social">
+        <img src="fb.png">
+        <img src="insta.png">
+        <img src="in.png">
+        <img src="yt.png">
+        <img src="tw.png">
+        </div>
+        </div>
+        <div class=" col-xs-offset-1 col-xs-2" style="margin-top:20px;">
+        <h2 style="color:#10439f"><b><span class="fa fa-map"></span> location</b></h2>
+        <a href="#" id="fs"> Salem Dental Center, 
+        104 Peramanur Main Road, 
+        4 Roads, Salem-636007</a>
+        </div>
+        <div class="col-xs-3" style="border: none;outline: none;">
+        <img src="map.png">
+        </div>
+        <div class="col-xs-12">
+        <br>
+        <br>
+        <div class="col-xs-4 col-xs-offset-2">
+            <img src="copyr.png" style="margin-right: 5px;">
+            <b style="color: white;">SALEM DENTAL CENTER - 2024 all rights reserved.</b>
+        </div>
+        <div class="col-xs-4">
+        <img src="privacypolicy.png" style="margin-left:125px;">
+        <a  href="privacypage.html"><b style="color:white;">privacy policy</b></a>
+        </div>
+        
+        </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script >
+
+$(document).ready(function(){
+	$("#btn1").click(function(){
+	$("#ourteam1").slideToggle("slow");   
+	});
+});
+</script>
+	
+
+</html> 

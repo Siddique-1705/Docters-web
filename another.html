@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dental</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UV-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="online shopping">
+    <meta name="author" content="elena">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <style>
+        @keyframes moveRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(80px);
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(80px);
+            }
+        }
+
+        .animated-image-right,
+        .animated-image-left {
+            margin-top: 50px;
+            opacity: 0;
+        }
+
+        .animated-image-right.scrolled,
+        .animated-image-left.scrolled {
+            opacity: 1;
+        }
+
+        .animated-image-right.scrolled {
+            animation: moveRight 1s ease-out forwards;
+        }
+
+        .animated-image-left.scrolled {
+            animation: moveLeft 1s ease-out forwards;
+        }
+
+
+
+        @media(width < 600px){
+
+         /* Ensuring the container is properly centered and responsive */
+         .col-xs-12 {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        /* Make images in the carousel fully responsive */
+        #mycarousel .carousel-inner .item img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Make buttons responsive */
+        .btn.form-control {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Adjust text sizes for better readability on smaller screens */
+        .about, .tname, .tname1 {
+            font-size: 16px;
+        }
+
+        /* Ensuring the "Our Team" section is properly aligned */
+        .col-xs-3 {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Make the footer content stack vertically */
+        #footer .col-xs-2 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #footer .col-xs-3 {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Adjust form inputs for smaller screens */
+        .form-control {
+            width: 100%;
+        }
+
+        /* Align the form and footer content more appropriately */
+        .col-xs-offset-2 {
+            margin-left: 0;
+        }
+
+        /* Adjust the services grid for smaller screens */
+        .col-xs-4 {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 15px;
+        }
+
+        .serviceimg {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Adjust the appointment form section */
+        .gf {
+            padding: 0 10px;
+        }
+
+        /* Make the appointment form fit the screen */
+        #form {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+        }
+
+        /* Adjust input fields for smaller screens */
+        #form input[type="text"],
+        #form input[type="email"],
+        #form input[type="date"],
+        #form input[type="time"],
+        #form select,
+        #form textarea {
+            width: 100%;
+            margin-bottom: 15px; /* Add spacing between inputs */
+        }
+
+        /* Reduce form title font size */
+        #form h2 {
+            font-size: 22px;
+        }
+
+        #form h4 {
+            font-size: 18px;
+        }
+
+        /* Adjust "Book Appointment" button */
+        #book {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Adjust the "Submit" button in the form */
+        #submit {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+        .col-xs-5{
+            display: none;
+        }
+
+
+        .col-xs-12 {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        /* "About Us" content layout */
+        .col-xs-6 {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 20px; /* Add space between the image and text */
+        }
+
+        /* Image should be responsive */
+        .col-xs-6 img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Adjust "About Us" section title font size */
+        .about {
+            font-size: 24px; /* Adjust for smaller screens */
+            margin-bottom: 10px;
+        }
+
+        /* Adjust the text paragraph for the About Us section */
+        .aboutp {
+            font-size: 16px; /* Make the text readable on small screens */
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* Adjust the "patient care overview" font size */
+        .patient-overview {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Adjust the patient stats layout */
+        .col-xs-6 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Ensure that the patient stats titles are aligned correctly */
+        .about h1 {
+            font-size: 22px; /* Adjust size */
+            margin-bottom: 5px;
+        }
+
+        /* Ensuring the stats numbers are centered and aligned */
+        .col-xs-6 h1 {
+            font-size: 25px; /* Adjust number size */
+            text-align: center;
+            margin: 0;
+        }
+
+        /* "Service" section buttons grid */
+        .col-xs-4 {
+            width: 100%;
+            padding: 0 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Service images should be responsive */
+        .serviceimg {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* "Book Appointment" form adjustments */
+        .form-control {
+            width: 100%;
+            margin-bottom: 15px; /* Add space between input fields */
+        }
+
+        /* Adjusting the "submit" button */
+        #submit {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+        .aboutp{
+            padding: 2rem;
+        }
+        .about{
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .tname, .tname1 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-xs-3 {
+        text-align: center;
+    }
+
+    .col-xs-3 img {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+    }
+    .navbar-brand img {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        right: 2.5rem;
+    }
+    .navbar-right{
+        padding: 1rem;
+        width: 460px;
+
+    }
+    .navbar-collapse{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    @media(width < 600px){
+
+/* Ensuring the container is properly centered and responsive */
+.col-xs-12 {
+   display: block;
+   max-width: 100%;
+   margin: auto;
+}
+
+/* Make images in the carousel fully responsive */
+#mycarousel .carousel-inner .item img {
+   width: 100%;
+   height: auto;
+}
+
+/* Make buttons responsive */
+.btn.form-control {
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+/* Adjust text sizes for better readability on smaller screens */
+.about, .tname, .tname1 {
+   font-size: 16px;
+}
+
+/* Ensuring the "Our Team" section is properly aligned */
+.col-xs-3 {
+   width: 100%;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+/* Make the footer content stack vertically */
+#footer .col-xs-2 {
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+#footer .col-xs-3 {
+   width: 100%;
+   margin-top: 20px;
+}
+
+/* Adjust form inputs for smaller screens */
+.form-control {
+   width: 100%;
+}
+
+/* Align the form and footer content more appropriately */
+.col-xs-offset-2 {
+   margin-left: 0;
+}
+
+/* Adjust the services grid for smaller screens */
+.col-xs-4 {
+   width: 100%;
+   padding: 0 10px;
+   margin-bottom: 15px;
+}
+
+.serviceimg {
+   width: 50px;
+   height: auto;
+   margin-right: 10px;
+}
+
+/* Adjust the appointment form section */
+.gf {
+   padding: 0 10px;
+}
+
+/* Make the appointment form fit the screen */
+#form {
+   width: 100%;
+   padding: 15px;
+   box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+/* Adjust input fields for smaller screens */
+#form input[type="text"],
+#form input[type="email"],
+#form input[type="date"],
+#form input[type="time"],
+#form select,
+#form textarea {
+   width: 100%;
+   margin-bottom: 15px; /* Add spacing between inputs */
+}
+
+/* Reduce form title font size */
+#form h2 {
+   font-size: 22px;
+}
+
+#form h4 {
+   font-size: 18px;
+}
+
+/* Adjust "Book Appointment" button */
+#book {
+   width: 100%;
+   padding: 15px;
+   text-align: center;
+}
+
+/* Adjust the "Submit" button in the form */
+#submit {
+   width: 100%;
+   padding: 15px;
+   text-align: center;
+}
+.col-xs-5{
+   display: none;
+}
+
+
+.col-xs-12 {
+   display: block;
+   max-width: 100%;
+   margin: auto;
+}
+
+/* "About Us" content layout */
+.col-xs-6 {
+   width: 100%;
+   padding: 0 10px;
+   margin-bottom: 20px; /* Add space between the image and text */
+}
+
+/* Image should be responsive */
+.col-xs-6 img {
+   width: 100%;
+   height: auto;
+}
+
+/* Adjust "About Us" section title font size */
+.about {
+   font-size: 24px; /* Adjust for smaller screens */
+   margin-bottom: 10px;
+}
+
+/* Adjust the text paragraph for the About Us section */
+.aboutp {
+   font-size: 16px; /* Make the text readable on small screens */
+   line-height: 1.5;
+   padding: 0 10px;
+}
+
+/* Adjust the "patient care overview" font size */
+.patient-overview {
+   font-size: 20px;
+   text-align: center;
+   margin-top: 20px;
+}
+
+/* Adjust the patient stats layout */
+.col-xs-6 {
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+/* Ensure that the patient stats titles are aligned correctly */
+.about h1 {
+   font-size: 22px; /* Adjust size */
+   margin-bottom: 5px;
+}
+
+/* Ensuring the stats numbers are centered and aligned */
+.col-xs-6 h1 {
+   font-size: 25px; /* Adjust number size */
+   text-align: center;
+   margin: 0;
+}
+
+/* "Service" section buttons grid */
+.col-xs-4 {
+   width: 100%;
+   padding: 0 10px;
+   margin-bottom: 15px;
+}
+
+/* Service images should be responsive */
+.serviceimg {
+   width: 50px;
+   height: auto;
+   margin-right: 10px;
+}
+
+/* "Book Appointment" form adjustments */
+.form-control {
+   width: 100%;
+   margin-bottom: 15px; /* Add space between input fields */
+}
+
+/* Adjusting the "submit" button */
+#submit {
+   width: 100%;
+   padding: 15px;
+   text-align: center;
+}
+.aboutp{
+   padding: 2rem;
+}
+.about{
+   padding-bottom: 1rem;
+   padding-top: 1rem;
+}
+
+.tname, .tname1 {
+text-align: center;
+margin-left: 0;
+margin-right: 0;
+}
+
+.col-xs-3 {
+text-align: center;
+}
+
+.col-xs-3 img {
+margin: 0 auto;
+display: block;
+width: 80%;
+}
+.navbar-brand img {
+display: block;
+margin: 0 auto;
+position: relative;
+right: 2.5rem;
+}
+.navbar-right{
+padding: 1rem;
+width: 460px;
+
+}
+.navbar-collapse{
+padding-top: 2rem;
+padding-bottom: 1rem;
+}
+
+.animated-image-left{
+        width:300px;
+        height: 300px;
+        position: relative;
+        right: 5rem;
+    }
+    .animated-image-right{
+        width:300px;
+        height: 300px;
+        position: relative;
+        right: 5rem;
+    }
+    #img-rev{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .img-gap{
+
+        position: relative;
+        right: 2.5rem;
+    }
+    #img3-flex{
+        position: relative;
+        right: 10rem;
+        width: 380px;
+        height: 150px;
+    }
+    .col-xs-offset-2{
+        position: relative;
+        right: 22rem;
+    }
+}
+}
+    </style>
+</head>
+<body>
+    <style>
+        body {
+            max-width: 1489px;
+            margin: auto;
+        }
+    </style>
+    <div class="row">
+        <nav class="navbar navbar-default" style="background: white;">
+            <div class="well" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <img  src="headlogo.png" height="60px" style="margin-left:50px;">
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="nav" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="second.html" >About us</a></li>
+                        <li><a href="another.html">Service</a></li>
+                        <li><a href="ourteam.html">OurTeam</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="col-xs-12">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mycarousel" data-slide-to="1" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active"><img src="1.jpg" alt="img not found" style="height:500px; width:100%;"></div>
+                <div class="item"><img src="2.jpg" alt="img not found" style="height:500px; width:100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <br>
+        <br>
+        <br>
+        <div class="col-xs-6">
+        <img src="4.png" class="img img-responsive">
+        </div>
+        <div class="col-xs-6">
+        <h1 class="about" align="center">About us</h1>
+        <center>
+        <p class="aboutp">Our team uses modern anesthetics, sedation options, and minimally invasive technology to reduce discomfort and eliminate pain during various procedures. Whether it’s a routine cleaning, filling, or more complex dental work, we’re committed to making each visit as smooth and painless as possible.</p>
+        </center>
+        <h1 class="about" style="font-size:35px;"align="center">patient care overview</h1>
+        
+        <div class="col-xs-12">
+        <br>
+        <div class="col-xs-6">
+        <h1 class="about" style="font-size:25px;;"align="center">25000+</h1>
+        <h1 class="about" style="font-size:25px;;"align="center"> happy clients</h1>
+        </div>
+        <div class="col-xs-6">
+        <h1 class="about" style="font-size:25px;"align="center">10</h1>
+        <h1 class="about" style="font-size:25px;"align="center">years of experience</h1>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <br><br><br>
+    <img src="service1.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service2.png" style="margin-top: 50px; margin-left: 60px;" class="animated-image-left">
+    <br>
+    <div id="img-rev">
+    <img src="service3.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service4.png" style="margin-top: 50px; margin-left: 30px;" class="animated-image-left">
+    </div>
+    <br>
+    <img src="service5.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service6.png" style="margin-top: 50px; margin-left: 60px;" class="animated-image-left">
+    <br>
+    <div id="img-rev">
+    <img src="service7.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service8.png" style="margin-top: 50px; margin-left: 30px;" class="animated-image-left">
+    </div>
+    <br>
+    <img src="service9.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service10.png" style="margin-top: 50px; margin-left: 60px;" class="animated-image-left">
+    <br>
+    <div id="img-rev">
+    <img src="service11.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service12.png" style="margin-top: 50px; margin-left: 30px;" class="animated-image-left">
+    </div>
+    <br>
+    <div id="img-rev">
+	<img src="service14.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service13.png" style="margin-top: 50px; margin-left: 30px;" class="animated-image-left">
+    </div>
+    <br>
+    <img src="service15.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service16.png" style="margin-top: 50px; margin-left: 30px;" class="animated-image-left">
+    <br>
+    <div id="img-rev">
+    <img src="service18.png" style="margin-top: 50px; margin-left: 80px;" class="animated-image-right">
+    <img src="service17.png" style="margin-top: 50px; margin-left: 30px;" class="animated-image-left">
+    </div>
+    <br>
+    
+    <div class="col-xs-12 " id="footer">
+        <br>
+        <img src="footerlogo.png" style="margin-left: 20px;">
+        <br>
+        <div class="col-xs-2">
+        <br>
+        <h2 style="color:#10439f"><b>Service</b></h2>
+        <a href="#" id="fs">Dental Implant        </a><br>
+        <a href="#" id="fs">Smile Designing       </a><br>
+        <a href="#" id="fs">Crowns & Bridges      </a><br>
+        <a href="#" id="fs">Alisners              </a><br>
+        <a href="#" id="fs">Root Canal Treatment  </a><br>
+        <a href="#" id="fs">Scaling & Bleaching   </a><br>
+        <a href="#" id="fs">Maxilo Facial Surgery </a><br>
+        <a href="#" id="fs">Laser treatment       </a><br>
+        </div>
+        <div class="col-xs-2">
+        <br>
+        <h2 style="color:#10439f"><b>Quick Links</b></h2>
+        <a href="#" id="fs">home </a><br>
+        <a href="#" id="fs">about us</a><br>
+        <a href="#" id="fs">Services</a><br>
+        <a href="#" id="fs">our team</a><br>
+        <a href="#" id="fs">contact us</a><br>
+        </div>
+        <div class="col-xs-2">
+        <br>
+        <h2 style="color:#10439f"><b>contact</b></h2>
+        <a href="#" id="fs"><u style="text-decoration: none;">phone</u><br>+91 9677389222</a><br>
+        <a href="#" id="fs"><u style="text-decoration: none;">mail</u><br>salemdentalcenter.in@gmail.com</a><br>
+        <div class="social">
+        <img src="fb.png">
+        <img src="insta.png">
+        <img src="in.png">
+        <img src="yt.png">
+        <img src="tw.png">
+        </div>
+        </div>
+        <div class=" col-xs-offset-1 col-xs-2" style="margin-top:20px;">
+        <h2 style="color:#10439f"><b><span class="fa fa-map"></span> location</b></h2>
+        <a href="#" id="fs"> Salem Dental Center, 
+        104 Peramanur Main Road, 
+        4 Roads, Salem-636007</a>
+        </div>
+        <div class="col-xs-3">
+        <img src="map.png">
+        </div>
+        <div class="col-xs-12">
+        <br>
+        <br>
+        <div class="col-xs-4 col-xs-offset-2" style="margin-left:230px;">
+            <img src="copyr.png" style="margin-right: 5px;">
+            <b style="color: white;">SALEM DENTAL CENTER - 2024 all rights reserved.</b>
+        </div>
+        <div class="col-xs-4">
+        <img src="privacypolicy.png" style="margin-left:125px;">
+        <a  href="privacypage.html"><b style="color:white;">privacy policy</b></a>
+        </div>
+        
+        </div>
+        </div>
+
+    <script>
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function addAnimationClass() {
+            var animatedElementsRight = document.querySelectorAll('.animated-image-right');
+            var animatedElementsLeft = document.querySelectorAll('.animated-image-left');
+
+            animatedElementsRight.forEach(function (el) {
+                if (isElementInViewport(el)) {
+                    el.classList.add('scrolled');
+                }
+            });
+
+            animatedElementsLeft.forEach(function (el) {
+                if (isElementInViewport(el)) {
+                    el.classList.add('scrolled');
+                }
+            });
+        }
+        window.addEventListener('scroll', addAnimationClass);
+        addAnimationClass();
+    </script>
+</body>
+</html>
